@@ -1,19 +1,51 @@
-# React + Vite
+# **Warmy 🎬**  
+**Your Ultimate Movie Search & Favorites Hub**  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## **Overview**  
+Warmy is a user-friendly movie search platform that allows users to explore upcoming and popular movies effortlessly. With a sleek and intuitive design, Warmy provides instant search functionality and a favorites list, making it easy to keep track of movies you love.  
 
-Currently, two official plugins are available:
+## **Features**  
+✅ **Search for Movies** – Quickly find details about upcoming and popular films.  
+✅ **Favorites List** – Save your favorite movies to access them easily later.  
+✅ **Trending Titles** – Stay updated with the latest releases and highly anticipated films.  
+✅ **Clean & Modern UI** – A smooth, responsive interface for the best user experience.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## **Tech Stack**  
+🔹 **Frontend:** React, Vite, Tailwind CSS  
+🔹 **Backend:** Express.js, MongoDB (Coming Soon)
+🔹 **Hosting:** Vercel  
 
-## Expanding the ESLint configuration
+## **How to Run Locally**  
+Clone the repository:  
+```sh
+git clone https://github.com/yourusername/warmy.git
+cd warmy
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Install dependencies:  
+```sh
+npm install
+```
 
-![image](https://github.com/user-attachments/assets/77905879-b782-469a-bbba-d248d765f884)
-![image](https://github.com/user-attachments/assets/8405f432-926d-48ad-b8d4-a5154f52b2eb)
-![image](https://github.com/user-attachments/assets/172ed974-efd7-4bc4-bdac-090e9d42cca1)
-![Uploading image.png…]()
+Start the development server:  
+```sh
+npm run dev
+```
+
+## **Live Demo**  
+Check out the live version here: **[Warmy Website](https://warmy-n1yyynxd8-chhavis-projects-0562af90.vercel.app/)** 
+Dark Theme
+![image](https://github.com/user-attachments/assets/c3d9ee49-42d5-4417-9448-0f2f891e0977)
+
+Light Theme
+![image](https://github.com/user-attachments/assets/aa4b915f-e1f8-4ce1-ba77-0aef218f6375)
+
+Search Movie
+![image](https://github.com/user-attachments/assets/d21a89d6-90c6-4b6c-b74f-5fc4c51f180b)
+
+Add Favorites & See Your Favorites
+![image](https://github.com/user-attachments/assets/19bacbcb-d3f0-495f-ba5a-baba9f369721)
+
+
 
 
