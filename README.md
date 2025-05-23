@@ -41,7 +41,8 @@ Light Theme
 ![image](https://github.com/user-attachments/assets/aa4b915f-e1f8-4ce1-ba77-0aef218f6375)
 
 Search Movie
-![image](https://github.com/user-attachments/assets/d21a89d6-90c6-4b6c-b74f-5fc4c51f180b)
+![image](https://github.com/user-attachments/assets/1061fe1f-c76a-4ab0-9566-1c2a376dc357)
+
 
 Add Favorites & See Your Favorites
 ![image](https://github.com/user-attachments/assets/19bacbcb-d3f0-495f-ba5a-baba9f369721)
