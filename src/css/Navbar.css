@@ -1,0 +1,466 @@
+/* Global theme variables */
+:root {
+  --transition-speed: 0.5s;
+  --border-radius: 12px;
+}
+
+/* Body theme classes */
+.dark-theme {
+  background-color: #111827;
+  color: #ffffff;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.light-theme {
+  background-color: #f9fafb;
+  color: #111827;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+/* Main navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  padding: 1rem 1.5rem;
+  transition: all var(--transition-speed);
+}
+
+.navbar.scrolled.dark {
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar.scrolled.light {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Animated background gradient */
+.navbar-gradient {
+  position: absolute;
+  inset: 0;
+  opacity: 0.5;
+  animation: pulse 2s infinite;
+}
+
+.navbar.dark .navbar-gradient {
+  background: linear-gradient(to right, 
+    rgba(168, 85, 247, 0.1), 
+    rgba(34, 211, 238, 0.1), 
+    rgba(236, 72, 153, 0.1)
+  );
+}
+
+.navbar.light .navbar-gradient {
+  background: linear-gradient(to right, 
+    rgba(59, 130, 246, 0.1), 
+    rgba(99, 102, 241, 0.1), 
+    rgba(168, 85, 247, 0.1)
+  );
+}
+
+/* Container */
+.navbar-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Brand styling */
+.navbar-brand {
+  position: relative;
+  cursor: pointer;
+  group: brand;
+}
+
+.brand-link {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.navbar.dark .brand-link {
+  background: linear-gradient(to right, #22d3ee, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.navbar.light .brand-link {
+  background: linear-gradient(to right, #2563eb, #4f46e5, #7c3aed);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.navbar-brand:hover .brand-link {
+  transform: scale(1.1);
+}
+
+.brand-underline {
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.navbar.dark .brand-underline {
+  background: linear-gradient(to right, #22d3ee, #a855f7);
+}
+
+.navbar.light .brand-underline {
+  background: linear-gradient(to right, #2563eb, #4f46e5);
+}
+
+.navbar-brand:hover .brand-underline {
+  transform: scaleX(1);
+}
+
+/* Navigation links container */
+.navbar-links {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+/* Individual nav links */
+.nav-link {
+  position: relative;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar.dark .nav-link {
+  color: #d1d5db;
+}
+
+.navbar.light .nav-link {
+  color: #4b5563;
+}
+
+.navbar.dark .nav-link:hover,
+.navbar.dark .nav-link.active {
+  color: #ffffff;
+}
+
+.navbar.light .nav-link:hover,
+.navbar.light .nav-link.active {
+  color: #111827;
+}
+
+/* Link background */
+.link-bg {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  transition: all 0.3s;
+  transform: scale(0);
+}
+
+.nav-link:hover .link-bg {
+  transform: scale(1);
+}
+
+.navbar.dark .link-bg {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar.light .link-bg {
+  background: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-link.active .link-bg {
+  transform: scale(1);
+}
+
+.navbar.dark .nav-link.active .link-bg {
+  background: linear-gradient(to right, 
+    rgba(34, 211, 238, 0.2), 
+    rgba(168, 85, 247, 0.2), 
+    rgba(236, 72, 153, 0.2)
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 25px rgba(168, 85, 247, 0.25);
+}
+
+.navbar.light .nav-link.active .link-bg {
+  background: linear-gradient(to right, 
+    rgba(59, 130, 246, 0.2), 
+    rgba(99, 102, 241, 0.2), 
+    rgba(168, 85, 247, 0.2)
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.25);
+}
+
+/* Link glow effect */
+.link-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  filter: blur(4px);
+}
+
+.nav-link:hover .link-glow {
+  opacity: 1;
+}
+
+.navbar.dark .link-glow {
+  background: linear-gradient(to right, rgba(34, 211, 238, 0.2), rgba(168, 85, 247, 0.2));
+}
+
+.navbar.light .link-glow {
+  background: linear-gradient(to right, rgba(59, 130, 246, 0.2), rgba(99, 102, 241, 0.2));
+}
+
+/* Link text */
+.link-text {
+  position: relative;
+  z-index: 10;
+}
+
+/* Active link indicator */
+.link-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.navbar.dark .link-indicator {
+  background: linear-gradient(to right, #22d3ee, #a855f7);
+}
+
+.navbar.light .link-indicator {
+  background: linear-gradient(to right, #2563eb, #4f46e5);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  margin-left: 1rem;
+  padding: 0.75rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-speed);
+}
+
+.navbar.dark .theme-toggle {
+  background: linear-gradient(to right, rgba(251, 191, 36, 0.2), rgba(249, 115, 22, 0.2));
+  border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.navbar.light .theme-toggle {
+  background: linear-gradient(to right, rgba(37, 99, 235, 0.2), rgba(67, 56, 202, 0.2));
+  border: 1px solid rgba(37, 99, 235, 0.3);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.05);
+}
+
+/* Toggle glow */
+.toggle-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  filter: blur(4px);
+}
+
+.theme-toggle:hover .toggle-glow {
+  opacity: 1;
+}
+
+.navbar.dark .toggle-glow {
+  background: rgba(251, 191, 36, 0.2);
+}
+
+.navbar.light .toggle-glow {
+  background: rgba(59, 130, 246, 0.2);
+}
+
+/* Icon container */
+.icon-container {
+  position: relative;
+  z-index: 10;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Sun and moon icons */
+.sun-icon,
+.moon-icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  transition: all var(--transition-speed);
+}
+
+.sun-icon.visible {
+  transform: rotate(0deg) scale(1);
+  color: #fbbf24;
+}
+
+.sun-icon.hidden {
+  transform: rotate(180deg) scale(0);
+  color: #fbbf24;
+}
+
+.moon-icon.visible {
+  transform: rotate(0deg) scale(1);
+  color: #3b82f6;
+}
+
+.moon-icon.hidden {
+  transform: rotate(-180deg) scale(0);
+  color: #3b82f6;
+}
+
+/* Mobile menu */
+.mobile-menu {
+  display: none;
+}
+
+.mobile-btn {
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.navbar.dark .mobile-btn {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.navbar.light .mobile-btn {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: #111827;
+}
+
+.mobile-btn:hover {
+  transform: scale(1.05);
+}
+
+.mobile-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Bottom glow line */
+.navbar-bottom-glow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+}
+
+.navbar.dark .navbar-bottom-glow {
+  background: linear-gradient(to right, 
+    transparent, 
+    rgba(34, 211, 238, 0.5), 
+    transparent
+  );
+}
+
+.navbar.light .navbar-bottom-glow {
+  background: linear-gradient(to right, 
+    transparent, 
+    rgba(59, 130, 246, 0.5), 
+    transparent
+  );
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .navbar-brand .brand-link {
+    font-size: 1.25rem;
+  }
+
+  .navbar-links {
+    gap: 0.5rem;
+  }
+
+  .nav-link {
+    padding: 0.5rem 1rem;
+  }
+
+  .theme-toggle {
+    margin-left: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .navbar-links .nav-link {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-container {
+    gap: 0.5rem;
+  }
+  
+  .theme-toggle {
+    margin-left: 0.25rem;
+  }
+}
